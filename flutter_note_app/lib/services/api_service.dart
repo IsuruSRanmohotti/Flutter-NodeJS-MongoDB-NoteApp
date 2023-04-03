@@ -6,8 +6,10 @@ import 'package:http/http.dart' as http;
 import '../models/note.dart';
 
 class ApiService {
+  
+  //Add Your URL
   static const String _baseUrl =
-      "https://afternoon-oasis-65747.herokuapp.com/notes";
+      "AddYourURL";
 
   static Future<void> addNote(Note note) async {
     Uri requestUri = Uri.parse("$_baseUrl/add");
