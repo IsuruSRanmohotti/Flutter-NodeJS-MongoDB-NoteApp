@@ -6,7 +6,8 @@ const Note = require('./models/note');
 app.use(bodyParcer.urlencoded({extended : false}));
 app.use(bodyParcer.json());
 
-const mongoDbPath = "mongodb+srv://ceylonedge:Isuru1234@cluster0.gcqkw1m.mongodb.net/notesdb";
+//Add Your mongoDbPath
+const mongoDbPath = "AddYourMongoDb";
 mongoose.connect(mongoDbPath).then(function(){
 //Home Route
 app.get("/", function(req,res){
