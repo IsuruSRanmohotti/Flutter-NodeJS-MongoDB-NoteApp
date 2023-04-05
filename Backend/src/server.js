@@ -6,8 +6,7 @@ const Note = require('./models/note');
 app.use(bodyParcer.urlencoded({extended : false}));
 app.use(bodyParcer.json());
 
-//Add Your mongoDbPath
-const mongoDbPath = "AddYourMongoDb";
+const mongoDbPath = "ADD_YOUR_MONGO_DB_PATH";
 mongoose.connect(mongoDbPath).then(function(){
 //Home Route
 app.get("/", function(req,res){
@@ -18,6 +17,8 @@ app.get("/", function(req,res){
 const noteRouter = require('./routes/note');
 app.use("/notes", noteRouter);
 
+const userRouter = require('./routes/user')
+app.use("/users",userRouter)
 });
 
 const PORT = process.env.PORT || 5000;
