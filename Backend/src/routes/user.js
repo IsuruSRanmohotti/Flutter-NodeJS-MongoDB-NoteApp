@@ -8,6 +8,9 @@ router.get("/list" ,async function(req,res){
     res.json(users);
 });
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//Add New User
+
 router.post("/add" , async function(req,res){
 
     await User.deleteOne({id: req.body.userID});
